@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+::-webkit-scrollbar-thumb {
+  background: #FEAB5F;
+
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FEAB5F;
+  
+  }
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth; /* Activar desplazamiento suave */
+
+}
+
+
+@media (min-width: 1024px) {
+ 
+  
+  /* Designing for scroll-bar */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    z-index: 100000000000000000000000;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+    z-index: 100000000000000000000000;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FEAB5F;
+    border-radius: 5px;
+    z-index: 100000000000000000000000;
+}
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Advanced Animation Keyframes */
+@keyframes text-shimmer {
+  0% { background-position: -500px 0; }
+  100% { background-position: 500px 0; }
+}
+
+@keyframes border-glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(250, 204, 21, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(250, 204, 21, 0.4); }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-up {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Existing animations with improvements */
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes tracking-in {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-15px) rotate(-2deg); }
+  100% { transform: translateY(0) rotate(-3deg); }
+}
+
+/* Animation Classes */
+.animate-text-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(250, 204, 21, 0.2), transparent);
+  background-size: 500px 100%;
+  animation: text-shimmer 3s infinite linear;
+}
+
+.animate-border-glow {
+  animation: border-glow 2s infinite ease-in-out;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animate-scale-up {
+  animation: scale-up 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+  opacity: 0;
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Glass morphism */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
