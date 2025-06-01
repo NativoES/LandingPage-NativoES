@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { translations } from '../utils/translations';
-type Language = 'en' | 'es' | 'ru';
+type Language = 'en' | 'es' | 'ru' | 'fr';
 
 
 interface LanguageState {

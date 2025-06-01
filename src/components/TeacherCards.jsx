@@ -1,8 +1,13 @@
 "use client"
 import Link from 'next/link'
 import Button from '@/components/Button'
+import { useLanguage } from '@/hooks/useLanguage';
 
 export default function TeacherCards({ teacher, key }) {
+
+  const { language, t } = useLanguage();
+  console.log("teacher: ", teacher);
+  
   return (
     <div
       key={key}
@@ -12,8 +17,8 @@ export default function TeacherCards({ teacher, key }) {
         className="relative left-0 right-0 mx-auto mb-8 w-[150px] h-[150px] object-cover rounded-full overflow-hidden"
       >
         <img
-          src={teacher.photo}
-          alt={teacher.name}
+          src={teacher[language].fotografia || "/bg2.jpg"}
+          alt={teacher[language].nombre || "Profesor"}
           className="relative left-0 right-0 mx-auto mb-8 w-[150px] h-[150px] object-cover rounded-full transition-all hover:scale-105"
         />
       </div>
@@ -23,7 +28,7 @@ export default function TeacherCards({ teacher, key }) {
       <div className="p-4 bg-white  border border-gray-200 rounded-[25px] my-8">
         <p className="text-black  mb-2">{teacher.subject}</p>
         <ul className="list-none space-y-2">
-          {teacher.items.map((item, index) => (
+          {teacher[language]?.resumenPrincipal.map((item, index) => (
             <li
               key={index}
               className="flex items-center space-x-2 text-gray-700"

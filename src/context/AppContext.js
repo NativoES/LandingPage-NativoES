@@ -16,8 +16,6 @@ export function AppProvider({ children }) {
 	const [cardPricingTwo, setCardPricingTwo] = useState('60min');
 
 
-
-
 	const [user, setUser] = useState(null)
 	const [users, setUsers] = useState(null)
 	const [userDB, setUserDB] = useState({ cuenta: 'tester' })

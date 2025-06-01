@@ -57,6 +57,7 @@ export default function Navbar() {
           >
             <option value="en">English</option>
             <option value="es">Español</option>
+            <option value="fr">Frances</option>
             <option value="ru">Русский</option>
           </select>
 

@@ -26,6 +26,7 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import CardTimes from "@/components/CardTimes";
 import { useAppContext } from "@/context/AppContext";
+import { useLanguage } from "@/hooks/useLanguage";
 export default function Home() {
   const [activeForm, setActiveForm] = useState(1);
   const searchParams = useSearchParams()
@@ -67,38 +68,56 @@ export default function Home() {
   ];
   const pathname = usePathname()
 
-  const teachers = [
-    {
-      name: "Juan Pérez",
-      subject: "Prof. Ruso",
-      photo: "/perfil1.png",
-      items: [
-        "Especialista en Ruso",
-        "Experto en gramatica",
-        "10 años de experiencia"
-      ]
-    },
-    {
-      name: "María López",
-      subject: "Prof. Ruso",
-      photo: "/perfil2.png",
-      items: [
-        "Especialista en Ruso",
-        "Experto en gramatica",
-        "10 años de experiencia"
-      ]
-    },
-    {
-      name: "Carlos Sánchez",
-      subject: "Prof. Español",
-      photo: "perfil3.png",
-      items: [
-        "Especialista en Ruso",
-        "Experto en gramatica",
-        "10 años de experiencia"
-      ]
-    },
-  ];
+  const { language, t } = useLanguage();
+  const [teachers, setTeachers] = useState([])
+
+  async function getData() {
+    const res = await fetch(`http://localhost:5000/api/teacher?locale=${language}`)
+    const data = await res.json()
+    console.log("teachers: ", data);
+    
+    setTeachers(data)
+  }
+
+  console.log("teachers: ", teachers)
+
+  useEffect(() => {
+    getData()
+  }, [language])
+
+  console.log("teachers: ", teachers);
+  // const teachers = [
+  //   {
+  //     name: "Juan Pérez",
+  //     subject: "Prof. Ruso",
+  //     photo: "/perfil1.png",
+  //     items: [
+  //       "Especialista en Ruso",
+  //       "Experto en gramatica",
+  //       "10 años de experiencia"
+  //     ]
+  //   },
+  //   {
+  //     name: "María López",
+  //     subject: "Prof. Ruso",
+  //     photo: "/perfil2.png",
+  //     items: [
+  //       "Especialista en Ruso",
+  //       "Experto en gramatica",
+  //       "10 años de experiencia"
+  //     ]
+  //   },
+  //   {
+  //     name: "Carlos Sánchez",
+  //     subject: "Prof. Español",
+  //     photo: "perfil3.png",
+  //     items: [
+  //       "Especialista en Ruso",
+  //       "Experto en gramatica",
+  //       "10 años de experiencia"
+  //     ]
+  //   },
+  // ];
   const [feedbacks, setFeedbacks] = useState([
     {
       name: "Ana Torres",
