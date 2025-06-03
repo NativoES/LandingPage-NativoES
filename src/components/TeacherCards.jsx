@@ -17,8 +17,8 @@ export default function TeacherCards({ teacher, key }) {
         className="relative left-0 right-0 mx-auto mb-8 w-[150px] h-[150px] object-cover rounded-full overflow-hidden"
       >
         <img
-          src={teacher[language].fotografia || "/bg2.jpg"}
-          alt={teacher[language].nombre || "Profesor"}
+          src={teacher[language]?.fotografia || "/bg2.jpg"}
+          alt={teacher[language]?.nombre || "Profesor"}
           className="relative left-0 right-0 mx-auto mb-8 w-[150px] h-[150px] object-cover rounded-full transition-all hover:scale-105"
         />
       </div>

@@ -34,6 +34,8 @@ export default function Home() {
   const { cardPricingOne, setCardPricingOne, cardPricingTwo, setCardPricingTwo } = useAppContext()
   const searchCard = searchParams.get('card')
   const router = useRouter()
+
+
   const languages = [
     {
       language: "Español intermedio",
@@ -75,7 +77,7 @@ export default function Home() {
     const res = await fetch(`http://localhost:5000/api/teacher?locale=${language}`)
     const data = await res.json()
     console.log("teachers: ", data);
-    
+
     setTeachers(data)
   }
 
@@ -141,6 +143,7 @@ export default function Home() {
       adminResponse: "Gracias por tu comentario, trabajaremos en las mejoras.",
     },
   ]);
+
   const [homes, setHomes] = useState([
     {
       textButton: "CLASE GRATUITA",
@@ -234,7 +237,7 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-      <SectionTemplate id={'about'} title={'Nuestro modo de trabajo'}>
+      <SectionTemplate id={'about'} title={'Nuestro modo de trabajoooo'}>
         <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4   gap-8">
           <div className="shadow border px-5 col-span-2">
             <h3 className="text-[20px] text-black font-medium">Plataformas interactivas</h3>
@@ -332,9 +335,10 @@ export default function Home() {
 
       <SectionTemplate id={'reviews'} title={'Reseñas'}>
         <Slider>
-          {feedbacks.map((feedback, index) => <FeedbackCard feedback={feedback} key={index}></FeedbackCard>)}
+          <FeedbackCard />
         </Slider>
       </SectionTemplate>
+
       <section id="pricing" className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gray-200">
         <div className="absolute top-0 left-[30px] h-[8px] w-[100px] bg-[#ffb06f] "> </div>
         <h2 className="text-3xl font-bold text-black mb-12 text-left">Precios</h2>

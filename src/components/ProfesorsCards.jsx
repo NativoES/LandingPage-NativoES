@@ -68,8 +68,8 @@ export default function ProfesorsCards() {
                             className="bg-[#ffffff] shadow-md rounded-[55px] border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow p-10"
                         >
                             <img
-                                src={teacher[language].fotografia || "/bg2.jpg"}
-                                alt={teacher[language].name || "profesor"}
+                                src={teacher[language]?.fotografia || "/bg2.jpg"}
+                                alt={teacher[language]?.nombre || "profesor"}
                                 className="relative left-0 right-0 mx-auto mb-8 w-48 h-48 object-cover rounded-full "
                             />
                             <h3 className="text-xl font-bold text-black text-center">{teacher[language]?.nombre}</h3>

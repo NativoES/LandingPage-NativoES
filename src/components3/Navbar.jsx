@@ -62,7 +62,7 @@ export default function Navbar() {
           </select>
 
           <button className="hidden md:inline-block bg-[#ffb06f] text-gray-900 px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-all transform hover:scale-105">
-            {t('nav.startFree')}
+            {t('Start Free')}
           </button>
         </div>
       </div>
