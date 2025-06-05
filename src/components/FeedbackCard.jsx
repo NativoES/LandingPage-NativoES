@@ -21,7 +21,7 @@ export default function FeedbackCard({ feedback }) {
       <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
         <div className="flex items-center max-w-md mx-auto p-4 space-y-4">
           <img
-            src={"/placeholder.jpg"}
+            src={ resennia?.avatarUrl || "/placeholder.jpg"}
             alt={resennia?.nombre}
             className="w-16 h-16 rounded-full object-cover mr-4 hover:scale-110 transition-all"
           />
