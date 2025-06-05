@@ -28,6 +28,7 @@ import CardTimes from "@/components/CardTimes";
 import { useAppContext } from "@/context/AppContext";
 import { useLanguage } from "@/hooks/useLanguage";
 import PlansSection from "@/components/Plan";
+import { ModoDeTrabajo } from "@/components/ModoDeTrabajo";
 export default function Home() {
   const [activeForm, setActiveForm] = useState(1);
   const searchParams = useSearchParams()
@@ -238,46 +239,8 @@ async function getDataReview() {
           </div>
         </div>
       </section> */}
-      {/* <SectionTemplate id={'about'} title={'Nuestro modo de trabajoooo'}>
-        <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4   gap-8">
-          <div className="shadow border px-5 col-span-2">
-            <h3 className="text-[20px] text-black font-medium">Plataformas interactivas</h3>
-            <p className="text-gray-600 pb-5">Todas las sesiones de nuestros cursos en linea se llevan a cabo en nuestra plataformas interactiva</p>
+      <ModoDeTrabajo />
 
-            <div className="relative w-full pb-[56.25%]">
-              <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video player"
-                className="absolute top-0 left-0 w-full h-full"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-
-          </div>
-          <div className="shadow border p-5 ">
-            <h3 className="text-[20px] text-black font-medium">Ejercicios divertidos</h3>
-            <p className="text-gray-600 pb-5">Sin tareas aburridas, libros de texto, solo ejercicios y juegos divertidos.</p>
-
-            <img src="/demo.jpg" className="w-full" alt="" />
-            <img src="/demo.jpg" className="w-full" alt="" />
-
-
-          </div>
-          <div className=" p-5 ">
-            <h3 className="text-[25px] text-black font-semibold">Mostrar como se trabajan</h3>
-            <p className="text-gray-600 pb-5">Enseñar todas la herramientas en forma de capsulas con titulo pequeño, texto y una foto o video.</p>
-
-            <button className="bg-[#ffb06f]  text-black px-4 py-2 rounded-md hover: transition-colors">
-              Descubrir más
-            </button>
-          </div>
-          <div>
-
-          </div>
-        </div>
-      </SectionTemplate> */}
       <SectionTemplate id={'teachers'} title={'Nuestros profesores'}>
         <Slider>
           {teachers.map((teacher, index) => <TeacherCards teacher={teacher} key={index}></TeacherCards>)}
@@ -340,7 +303,7 @@ async function getDataReview() {
         </Slider>
       </SectionTemplate>
 
-        <PlansSection />
+      <PlansSection />
       {/* <section id="pricing" className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gray-200">
         <div className="absolute top-0 left-[30px] h-[8px] w-[100px] bg-[#ffb06f] "> </div>
         <h2 className="text-3xl font-bold text-black mb-12 text-left">Precios</h2>
