@@ -248,10 +248,11 @@ export default function Home() {
           <div className=" p-5 ">
             <h3 className="text-[25px] text-black font-semibold">Mostrar como se trabajan</h3>
             <p className="text-gray-600 pb-5">Enseñar todas la herramientas en forma de capsulas con titulo pequeño, texto y una foto o video.</p>
-
-            <button className="bg-[#ffb06f]  text-black px-4 py-2 rounded-md hover: transition-colors">
-              Descubrir más
-            </button>
+            <Link href={'/Work'}>
+              <button className="bg-[#ffb06f]  text-black px-4 py-2 rounded-md hover: transition-colors">
+                Descubrir más
+              </button>
+            </Link>
           </div>
           <div>
 

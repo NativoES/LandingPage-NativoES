@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import SectionTemplate from './SectionTemplate'
 import { useLanguage } from '@/hooks/useLanguage';
+import Link from 'next/link';
 
 export const ModoDeTrabajo = () => {
 
@@ -71,9 +72,11 @@ export const ModoDeTrabajo = () => {
                             className="text-gray-600 pb-5"
                             dangerouslySetInnerHTML={{ __html: data[2][language].descripcion }}
                         />
-                        <button className="bg-[#ffb06f]  text-black px-4 py-2 rounded-md hover: transition-colors">
-                            Descubrir más
-                        </button>
+                        <Link href={'/Work'}>
+                            <button className="bg-[#ffb06f]  text-black px-4 py-2 rounded-md hover: transition-colors">
+                                Descubrir más
+                            </button>
+                        </Link>
                     </div>
                 )}
 
