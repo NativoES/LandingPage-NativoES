@@ -11,9 +11,8 @@ export default function PageWork() {
     try {
       const url = `http://localhost:5000/api/form-study?locale=${lang}`
       const res = await fetch(url)
-      const response = await res.json()
+      const response = await res.json();
 
-      // Si la respuesta es un solo objeto, ponlo en un array
       const items = Array.isArray(response) ? response : [response]
       setData(items)
     } catch (error) {
@@ -24,6 +23,9 @@ export default function PageWork() {
   useEffect(() => {
     loadData(language)
   }, [language])
+
+  console.log("data: ", data);
+
 
   return (
     <div className="bg-gray-100 min-h-screen p-6 md:p-12 text-gray-800">
@@ -36,9 +38,9 @@ export default function PageWork() {
             const titulo = contenido?.titulo
             const descripcion = contenido?.descripcion
             const icono = contenido?.typeIcon
+            const isVideo = contenido?.media?.type?.includes("video")
 
-            // Detectar si la descripción contiene una URL de video (simplificado)
-            const isVideo = descripcion?.includes("iframe")
+            console.log("descripcion: ", contenido)
 
             return (
               <div key={index} className="space-y-6">
@@ -52,10 +54,17 @@ export default function PageWork() {
 
                 {/* Mostrar video si es iframe, si no, mostrar imagen */}
                 {isVideo ? (
-                  <div
-                    className="relative rounded-lg overflow-hidden shadow-md"
-                    dangerouslySetInnerHTML={{ __html: descripcion.match(/<iframe.*<\/iframe>/)?.[0] || "" }}
-                  />
+                  <div className="relative rounded-lg overflow-hidden shadow-md"
+                  >
+                    <iframe
+                      src={contenido?.media?.type?.url}
+                      title="YouTube video player"
+                      className="absolute top-0 left-0 w-full h-full"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
                 ) : (
                   <div className="relative rounded-lg overflow-hidden shadow-md">
                     <Image
