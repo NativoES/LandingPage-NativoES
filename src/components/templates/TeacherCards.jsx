@@ -28,7 +28,7 @@ export default function TeacherCards({ teacher, key }) {
       <div className="p-4 bg-white  border border-gray-200 rounded-[25px] my-8">
         <p className="text-black  mb-2">{teacher.subject}</p>
         <ul className="list-none space-y-2">
-          {teacher[language]?.resumenPrincipal.map((item, index) => (
+          {/* {teacher[language]?.resumenPrincipal?.map((item, index) => (
             <li
               key={index}
               className="flex items-center space-x-2 text-gray-700"
@@ -36,7 +36,7 @@ export default function TeacherCards({ teacher, key }) {
               <span className="text-black">•</span>
               <span>{item}</span>
             </li>
-          ))}
+          ))} */}
         </ul>
       </div>
       <div className=" flex justify-center">

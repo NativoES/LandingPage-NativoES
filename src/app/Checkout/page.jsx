@@ -31,7 +31,7 @@ import Button from "@/components/ui/Button";
 import CardTimes from "@/components/CardTimes";
 import { useAppContext } from "@/context/AppContext";
 
-import CardClases from '@/components/CardClases';
+// import CardClases from '@/components/CardClases';
 const ServicesSection = ({ services }) => {
 
   const [homes, setHomes] = useState([
@@ -129,7 +129,7 @@ const ServicesSection = ({ services }) => {
 
 
 
-      <CardClases></CardClases>
+      {/* <CardClases></CardClases> */}
 
 
 
