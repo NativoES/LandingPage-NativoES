@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import Button from '@/components/Button'
+import Button from '@/components/ui/Button'
 import { useLanguage } from '@/hooks/useLanguage';
 
 export default function TeacherCards({ teacher, key }) {

@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Languages } from 'lucide-react';
 import { Globe2, Menu, X } from 'lucide-react';
 
-import { useLanguage } from '../hooks/useLanguage';
-import { translations } from '../utils/translations';
+import { useLanguage } from '@/hooks/useLanguage';
+import { translations } from '@/utils/translations';
 
 export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();

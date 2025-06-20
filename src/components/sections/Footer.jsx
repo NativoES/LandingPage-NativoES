@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '@/hooks/useLanguage';
 import { Languages, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 
 export function Footer() {
@@ -17,7 +17,7 @@ export function Footer() {
             <p className="text-gray-400">
               Premium language learning platform for ambitious learners worldwide.
             </p>
-          </div>
+          </div>         
           
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Contact</h3>
@@ -28,7 +28,7 @@ export function Footer() {
               </a>
               <a href="tel:+1234567890" className="flex items-center space-x-2 hover:text-[#ffb06f] transition-colors">
                 <Phone className="w-5 h-5" />
-                <span>+1 (234) 567-890</span>
+                <span>+1 (234) 567-890</span>   
               </a>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5" />

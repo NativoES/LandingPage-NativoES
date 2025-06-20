@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Globe2 } from 'lucide-react';
 import FormInput from '@/components/FormInput';
-import Button from '@/components/Button';
+import Button from '@/components/ui/Button';
 
 // import Logo from './Logo';
 

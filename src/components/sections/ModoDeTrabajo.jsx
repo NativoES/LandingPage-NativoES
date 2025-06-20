@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState } from 'react'
-import SectionTemplate from './SectionTemplate'
 import { useLanguage } from '@/hooks/useLanguage';
 import Link from 'next/link';
 
@@ -26,12 +25,9 @@ export const ModoDeTrabajo = () => {
         loadData(language);
     }, [language]);
 
-    console.log("data: ", data[0]);
-
-
+    console.log("metodo: ", data[0]);
 
     return (
-        <SectionTemplate id={'about'} title={'Nuestro modo de trabajo'}>
             <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4   gap-8">
                 {data[0] && data[0][language] && (
                     <div className="shadow border px-5 col-span-2">
@@ -79,11 +75,6 @@ export const ModoDeTrabajo = () => {
                         </Link>
                     </div>
                 )}
-
-                <div>
-
-                </div>
             </div>
-        </SectionTemplate>
     )
 }

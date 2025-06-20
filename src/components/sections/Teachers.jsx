@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '@/hooks/useLanguage';
 import { Star, Award } from 'lucide-react';
 
 export function Teachers() {
@@ -19,29 +19,7 @@ export function Teachers() {
 
     console.log("teachers: ", teachers);
     
-  // const teachers = [
-  //   {
-  //     name: 'Sarah Johnson',
-  //     language: 'English',
-  //     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-  //     rating: 4.9,
-  //     specialization: 'Business English'
-  //   },
-  //   {
-  //     name: 'Carlos Rodríguez',
-  //     language: 'Spanish',
-  //     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-  //     rating: 4.8,
-  //     specialization: 'Conversational Spanish'
-  //   },
-  //   {
-  //     name: 'Anna Petrova',
-  //     language: 'Russian',
-  //     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-  //     rating: 4.9,
-  //     specialization: 'Russian Literature'
-  //   }
-  // ];
+
 
   return (
     <section id="teachers" className="py-20 bg-gray-100">

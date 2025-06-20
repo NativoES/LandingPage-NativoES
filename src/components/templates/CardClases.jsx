@@ -1,6 +1,6 @@
 'use client'
 import ScrollAnimation from 'react-animate-on-scroll';
-import Button from '@/components/Button';
+import Button from '@/components/ui/Button';
 import CardTimes from '@/components/CardTimes';
 
 import { useAppContext } from "@/context/AppContext";

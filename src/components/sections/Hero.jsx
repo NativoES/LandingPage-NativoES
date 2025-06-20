@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { ChevronRight, Sparkles } from 'lucide-react';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '@/hooks/useLanguage';
 
 export function Hero() {
   const { language, t } = useLanguage();
@@ -15,15 +15,12 @@ export function Hero() {
     setFormData(data[0])
   }
 
-  console.log("formData: ", formData)
   useEffect(() => {
     getData()
   }, [language])
 
 
   return (
-
-
     <div className="relative min-h-screen overflow-hidden bg-[#ffffff] pt-[40px] md:pt-[70px] ">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 animate-gradient"></div>
       <div className="absolute inset-0">

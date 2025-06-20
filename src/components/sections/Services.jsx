@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Video, Users, MessageCircle, BookOpen, GraduationCap, Globe } from 'lucide-react';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '@/hooks/useLanguage';
 import "@/app/globals.css";
 
 // 1. Mapeo de iconos

@@ -1,8 +1,8 @@
 'use client'
 import { useEffect, useState } from "react";
-import Button from "@/components/Button";
+import Button from "@/components/ui/Button";
 import { useLanguage } from "@/hooks/useLanguage";
-import CardPricing from '@/components/CardPricing';
+import CardPricing from '@/components/templates/CardPricing';
 import CardTimes from "@/components/CardTimes";
 import { useAppContext } from "@/context/AppContext";
 
