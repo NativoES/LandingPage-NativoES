@@ -17,7 +17,7 @@ export function Footer() {
             <p className="text-gray-400">
               Premium language learning platform for ambitious learners worldwide.
             </p>
-          </div>
+          </div>         
           
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Contact</h3>
