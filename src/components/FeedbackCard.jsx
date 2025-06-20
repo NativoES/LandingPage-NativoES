@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import Button from "@/components/Button";
+import Button from "@/components/ui/Button";
 import ScrollAnimation from 'react-animate-on-scroll';
 import Link from 'next/link';
 import { useLanguage } from "@/hooks/useLanguage";

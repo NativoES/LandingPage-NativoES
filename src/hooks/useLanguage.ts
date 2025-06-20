@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { translations } from '../utils/translations';
+import { translations } from '@/utils/translations';
 type Language = 'en' | 'es' | 'ru' | 'fr';
 
 

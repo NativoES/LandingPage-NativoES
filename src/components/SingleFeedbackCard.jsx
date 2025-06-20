@@ -3,7 +3,7 @@
 import React from 'react';
 import { StarIcon } from '@heroicons/react/24/solid';
 import ScrollAnimation from 'react-animate-on-scroll';
-import Button from '@/components/Button';
+import Button from '@/components/ui/Button';
 import Link from 'next/link';
 
 export default function SingleFeedbackCard({ feedback }) {

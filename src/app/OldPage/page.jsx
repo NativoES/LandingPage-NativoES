@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import LanguageCard from '@/components/LanguageCard';
-import TeacherCards from '@/components/TeacherCards';
+import TeacherCards from '@/components/templates/TeacherCards';
 import FeedbackCard from '@/components/FeedbackCard';
 import { useState, useCallback, useEffect } from "react";
 import { MessageSquare, Users, Award, Globe2, Video, BookOpen, Headphones, Brain, PhoneIcon } from 'lucide-react';
@@ -17,13 +17,13 @@ import "animate.css/animate.compat.css"
 // import 'react-awesome-slider/dist/styles.css';
 import MiniCard from "@/components/MiniCard";
 import Footer from "@/components/Footer";
-import Services from "@/components3/Services";
-import Navbar3 from "@/components3/Navbar";
-import { Hero } from '@/components3/Hero';
-import CardPricing from '@/components/CardPricing';
+import Services from "@/components/sections/Services";
+import Navbar3 from "@/components/sections/Navbar";
+import { Hero } from '@/components/sections/Hero';
+import CardPricing from '@/components/templates/CardPricing';
 import { useSearchParams, usePathname } from 'next/navigation'
 import Link from "next/link";
-import Button from "@/components/Button";
+import Button from "@/components/ui/Button";
 
 export default function Home() {
   const [activeForm, setActiveForm] = useState(1);

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import LanguageCard from '@/components/LanguageCard';
-import TeacherCards from '@/components/TeacherCards';
+import TeacherCards from '@/components/templates/TeacherCards';
 import FeedbackCard from '@/components/FeedbackCard';
 import { useState } from "react";
 import { MessageSquare, Users, Award, Globe2, Video, BookOpen, Headphones, Brain, PhoneIcon } from 'lucide-react';
