@@ -36,7 +36,7 @@ export default function Home() {
   async function getData() {
     try {
       if (!language) return;
-      const res = await fetch(`http://localhost:5000/api/teacher?locale=${language}`);
+      const res = await fetch(`http://localhost:5000/api/landing/teacher?locale=${language}`);
       if (!res.ok) throw new Error(`Error HTTP: ${res.status}`);
 
       const data = await res.json();
@@ -50,7 +50,7 @@ export default function Home() {
   async function getDataReview() {
     try {
       if (!language) return;
-      const res = await fetch(`http://localhost:5000/api/review?locale=${language}`);
+      const res = await fetch(`http://localhost:5000/api/landing/review?locale=${language}`);
       if (!res.ok) throw new Error(`Error HTTP: ${res.status}`);
 
       const data = await res.json();

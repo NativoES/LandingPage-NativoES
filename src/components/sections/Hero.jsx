@@ -10,7 +10,7 @@ export function Hero() {
   console.log("language", language);
 
   async function getData() {
-    const res = await fetch(`http://localhost:5000/api/hero?locale=${language}`)
+    const res = await fetch(`http://localhost:5000/api/landing/hero?locale=${language}`)
     const data = await res.json()
     setFormData(data[0])
   }

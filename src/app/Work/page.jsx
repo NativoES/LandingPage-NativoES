@@ -9,7 +9,7 @@ export default function PageWork() {
 
   const loadData = async (lang) => {
     try {
-      const url = `http://localhost:5000/api/form-study?locale=${lang}`
+      const url = `http://localhost:5000/api/landing/form-study?locale=${lang}`
       const res = await fetch(url)
       const response = await res.json();
 

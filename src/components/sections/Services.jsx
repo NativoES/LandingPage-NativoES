@@ -23,7 +23,7 @@ export default function Services() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/method-course?locale=${language}`);
+        const res = await fetch(`http://localhost:5000/api/landing/method-course?locale=${language}`);
         const data = await res.json();
         const parsed = data.map((item) => {
           const content = item[language];

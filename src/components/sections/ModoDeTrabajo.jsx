@@ -12,7 +12,7 @@ export const ModoDeTrabajo = () => {
 
     const loadData = async (lang) => {
         try {
-            const url = `http://localhost:5000/api/form-study?locale=${lang}`;
+            const url = `http://localhost:5000/api/landing/form-study?locale=${lang}`;
             const res = await fetch(url);
             const data = await res.json();
             setData(data);

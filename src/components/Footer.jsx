@@ -17,7 +17,7 @@ export default function Footer() {
         if (!lang) return; // no cargar si no hay lenguaje
         const loadData = async () => {
             try {
-                const url = `http://localhost:5000/api/information?locale=${lang}`;
+                const url = `http://localhost:5000/api/landing/information?locale=${lang}`;
                 const res = await fetch(url);
                 const data = await res.json();
                 setInformation(data);

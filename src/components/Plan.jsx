@@ -18,7 +18,7 @@ export default function PlansSection() {
 
   const loadData = async (lang) => {
     try {
-      const url = `http://localhost:5000/api/plan?locale=${lang}`;
+      const url = `http://localhost:5000/api/landing/plan?locale=${lang}`;
       const res = await fetch(url);
       const data = await res.json();
       setPlans(data);

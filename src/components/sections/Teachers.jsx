@@ -7,7 +7,7 @@ export function Teachers() {
   const [teachers, setTeachers] = uTseState([])
 
   async function getData() {
-      const res = await fetch(`http://localhost:5000/api/hero?locale=${language}`)
+      const res = await fetch(`http://localhost:5000/api/landing/hero?locale=${language}`)
       const data = await res.json()
       setTeachers(data)
     }

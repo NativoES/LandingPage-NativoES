@@ -9,7 +9,7 @@ export default function ProfesorsCards() {
     const [teachers, setTeachers] = useState([])
 
     async function getData() {
-        const res = await fetch(`http://localhost:5000/api/teacher?locale=${language}`)
+        const res = await fetch(`http://localhost:5000/api/landing/teacher?locale=${language}`)
         const data = await res.json()
         setTeachers(data)
     }
